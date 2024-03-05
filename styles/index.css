@@ -1,0 +1,48 @@
+article p {
+    margin-block: 20px;
+}
+
+#article-img {
+    border: solid var(--white);
+}
+
+#h2-banner {
+    margin: 20px 0 10px 0;
+    padding: 10px 0 10px 0;
+    background-color: var(--banner-green-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+#banner-arrows {
+    display: none;
+}
+
+#h2-banner h2 {
+    z-index: 1;
+    position: relative;
+    margin: 0 10px 0 10px;
+}
+
+#banner-arrows {
+    z-index: 0;
+}
+
+li {
+    margin-top: 15px;
+}
+
+@media screen and (min-width: 222px) {
+    #h2-banner {
+        background-color: var(--banner-green);
+    }
+
+    #banner-arrows {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+    }
+}

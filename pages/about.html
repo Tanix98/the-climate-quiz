@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Short report about how the project was carried out."
+        />
+        <title>About the project</title>
+        <link href="../styles/styles.css" rel="stylesheet" />
+        <link href="../styles/about.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="header-main">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="game.html">Game</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <img
+                                src="../assets/icons/leaf.svg"
+                                alt="Current page"
+                            />
+                            <a href="about.html" id="current-page">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <article>
+                    <h1>About the project</h1>
+                    <section>
+                        <h2>Design</h2>
+                        <p>
+                            The target audience I went for is parents and
+                            teachers of kindergarten kids. For the game idea I
+                            decided a quiz could be a fun way for kids to learn
+                            and become more motivated about environmentalism.
+                            So, the ultimate goal of my website is to convince
+                            teacher and parents to get kids to play the climate
+                            quiz.
+                        </p>
+                        <p>
+                            The very first thing I did was set up a Trello to
+                            ensure that I kept track of what my plan was and the
+                            exact steps I needed to take. I wanted to have the
+                            entire layout and look of the website figured out
+                            before I started coding. In order to do that I ended
+                            up creating not just wireframes for the mobile,
+                            tablet and desktop versions, but also a style guide
+                            and prototype, which can all be viewed on
+                            <a
+                                target="_blank"
+                                title="Opens Figma in a new window"
+                                href="https://www.figma.com/file/Imw509fGVW5qMoy0eGUgXy/Oblig-3---webkoding?type=design&node-id=0%3A1&mode=design&t=8E6S44Psnzs6FnnX-1"
+                                >my Figma project</a
+                            >.
+                        </p>
+                        <figure>
+                            <img
+                                src="../assets/images/wireframe-and-prototype.webp"
+                                alt="Wireframe and prototype of the tablet layout"
+                            />
+                            <figcaption>
+                                Wireframe of the game page on the left,
+                                prototype of the home page on the right. Both
+                                use the tablet layout.
+                            </figcaption>
+                        </figure>
+                        <p>
+                            I went for a mostly professional, trustworthy and
+                            minimalist design. But the headings typeface is
+                            childish, and the paragraph typeface soft, just to
+                            convey that the website does still have the
+                            kindergarten kids in mind. Of course, readability
+                            was always prioritized.
+                        </p>
+                        <figure>
+                            <img
+                                src="../assets/images/style-guide.webp"
+                                alt="Style guide showing the design for all icons and buttons, as well as the color palette, font sizes and typefaces"
+                            />
+                            <figcaption>Style guide used.</figcaption>
+                        </figure>
+                        <p>
+                            For the header I decided that four separate button
+                            links to each page would look best, and be easier to
+                            move around for the different layouts. The desktop
+                            layout has the navbar moved to the right side of the
+                            page, not only in order to reduce white space on
+                            wider screens, but also to push the main content
+                            more to the left, which is better for English
+                            speaking users that read from left to right.
+                        </p>
+                        <p>
+                            The NTNU logo is very large on mobile, but that is
+                            because I want the layout to be very consistent,
+                            which means the footer elements must have all the
+                            same width.
+                        </p>
+                        <p>
+                            In the navbar I added a leaf icon to the current
+                            page button, in order to not just rely on color to
+                            inform the user which page they’re currently on,
+                            because that could be problematic for color blind
+                            users.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Structure</h2>
+                        <p>
+                            I’ve tried my best to keep the project well
+                            organized, with an easy to navigate file structure.
+                            All of the file types are separated into their own
+                            folders, and only the assets have a sub-folder, in
+                            order to separate the icons, images and typefaces.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Sustainability</h2>
+                        <p>
+                            All image files were converted to webp format and
+                            compressed, which resulted in around 70% reduction
+                            in file sizes. The pdf of the quiz cards has also
+                            been compressed. The typefaces are in the project as
+                            local files instead of being imported using the
+                            Google Fonts CDN, in order to avoid network
+                            requests. Typefaces have also been converted from
+                            ttf to woff2 for smaller file sizes. I’ve also tried
+                            my best to follow the DRY principle, to keep the
+                            code clean, efficient and as eco-friendly as
+                            possible.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Code</h2>
+                        <p>
+                            I debated putting the sidebar navigation in an
+                            aside, but since it is not related to the page
+                            content it didn’t seem appropriate. Ended up using
+                            more media queries than I wanted to, because some
+                            elements like the flip cards, navbar leaf and arrows
+                            in the h2 banner on the front page required some
+                            extra code for very small screen widths.
+                        </p>
+                        <p>
+                            I used the same naming convention for all my classes
+                            and ids. Tried to correctly use the article, section
+                            and figure elements, to make the HTML more semantic.
+                        </p>
+                        <p>
+                            I gave the tabindex attribute a value of 0 to make
+                            the cards focusable, and used the focus pseudo-class
+                            for making the hover animations play when the
+                            elements are focused. This makes the cards
+                            accessible for people relying on keyboard navigation
+                            and screen readers. Also used the title attribute on
+                            some links to inform people with screen readers that
+                            they open in a new window. Added descriptive alt
+                            text to the article images.
+                        </p>
+                        <p>
+                            Used Shorthand properties as much as possible in the
+                            CSS. I tried to add some comments in CSS to organize
+                            it into different layouts, but I admit that comment
+                            is something that I need to get better at.
+                        </p>
+                        <p>
+                            My impression during this project was that the very
+                            simple layouts were easier to create using flex,
+                            while grid seemed the most appropriate for the
+                            footer since it had many elements and required a
+                            more complex layout.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Sources</h2>
+                        <h3>Typefaces:</h3>
+                        <ul>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens Google Fonts in a new window"
+                                    href="https://fonts.google.com/specimen/Boogaloo"
+                                    >Boogalo - Google Fonts</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens Google Fonts in a new window"
+                                    href="https://fonts.google.com/specimen/Fredoka"
+                                    >Fredoka - Google Fonts</a
+                                >
+                            </li>
+                        </ul>
+                        <h3>Images:</h3>
+                        <ul>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://unsplash.com/photos/aerial-photography-of-mountains-and-near-trees-during-daytime-aZjw7xI3QAA"
+                                    title="Opens Unsplash in a new window"
+                                    >Website background image by Simon Berger</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://unsplash.com/photos/grass-field-and-mountain-ranges-hXNGeAFOgT4"
+                                    title="Opens Unsplash in a new window"
+                                    >Home page image by Nikola Majksner</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://unsplash.com/photos/four-children-standing-on-dirt-during-daytime-iDCtsz-INHI"
+                                    title="Opens Unsplash in a new window"
+                                    >Game page image by Ben Wicks</a
+                                >
+                            </li>
+                        </ul>
+                        <h3>Icons:</h3>
+                        <ul>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens Vecteezy in a new window"
+                                    href="https://www.vecteezy.com/vector-art/547192-natural-leaf-logo-icon-vector"
+                                    >Leaf icon by Burhan Adiatma on Vecteezy
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    title="Opens Vecteezy in a new window"
+                                    href="https://www.vecteezy.com/free-vector/abstract"
+                                    >Abstract Vectors by Vecteezy</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://www.flaticon.com/free-icons/bottle"
+                                    title="Opens Flaticon in a new window"
+                                    >Bottle icons created by Freepik -
+                                    Flaticon</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://www.flaticon.com/free-icons/restaurant"
+                                    title="Opens Flaticon in a new window"
+                                    >Restaurant icons created by Freepik -
+                                    Flaticon</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://www.flaticon.com/free-icons/energy"
+                                    title="Opens Flaticon in a new window"
+                                    >Energy icons created by Pixel perfect -
+                                    Flaticon</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://www.flaticon.com/free-icons/pollution"
+                                    title="Opens Flaticon in a new window"
+                                    >Pollution icons created by Freepik -
+                                    Flaticon</a
+                                >
+                            </li>
+                        </ul>
+                        <h3>Validators:</h3>
+                        <ul>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens W3 validator in a new window"
+                                    href="https://validator.w3.org/#validate_by_input"
+                                    >W3 validator</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens Powermapper in a new window"
+                                    href="https://try.powermapper.com"
+                                    >Powermapper</a
+                                >
+                            </li>
+                        </ul>
+                        <h3>Card flip animation and accessibility:</h3>
+                        <ul>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens W3Schools in a new window"
+                                    href="https://www.w3schools.com/howto/howto_css_flip_card.asp"
+                                    >How to create a flip card with CSS -
+                                    W3Schools</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens Stack Overflow in a new window"
+                                    href="https://stackoverflow.com/questions/71562567/how-to-make-interactive-flipcards-accessible-to-screen-readers-with-aria"
+                                    >How to make interactive flipcards
+                                    accessible to screen readers - Stack
+                                    Overflow</a
+                                >
+                            </li>
+                        </ul>
+                        <h3>Climate change facts:</h3>
+                        <ul>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens FairPlanet in a new window"
+                                    href="https://www.fairplanet.org/story/7-foods-with-high-carbon-footprints/"
+                                    >7 foods with high carbon footprints</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens UN in a new window"
+                                    href="https://www.un.org/en/climatechange/what-is-renewable-energy"
+                                    >What is renewable energy</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    title="Opens National Geographic in a new window"
+                                    href="https://education.nationalgeographic.org/resource/non-renewable-energy/"
+                                    >Nonrenewable Energy</a
+                                >
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <a href="#header-main" class="reference">Go back to the top</a>
+            </main>
+        </div>
+        <footer>
+            <div id="footer-container">
+                <p id="text1">
+                    <small
+                        >Department of Design at the Norwegian University of
+                        Science and Technology in Gjøvik</small
+                    >
+                </p>
+                <div id="text2">
+                    <p><small>Address: Raufossvegen 40, 2821 Gjøvik</small></p>
+                    <p><small>Phone number: 61 13 54 00</small></p>
+                </div>
+                <iframe
+                    loading="lazy"
+                    allowfullscreen
+                    title="Map of the location of the Department of Design"
+                    src="https://www.google.com/maps/embed/v1/search?q=Raufossvegen+40,+2821+Gjøvik,+Norway&key=AIzaSyC80WbFfKwlIuHDdTcMj_sRMm6qlrA85Cg"
+                    id="map-embed"
+                ></iframe>
+                <div id="social-media">
+                    <a
+                        href="https://www.linkedin.com/school/ntnu/"
+                        target="_blank"
+                        title="Opens LinkedIn in a new window"
+                    >
+                        <img
+                            src="../assets/icons/linkedin.svg"
+                            alt="LinkedIn"
+                        />
+                    </a>
+                    <a
+                        href="https://www.youtube.com/user/ntnuinfo"
+                        target="_blank"
+                        title="Opens Youtube in a new window"
+                    >
+                        <img src="../assets/icons/youtube.svg" alt="Youtube" />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/ntnu.no"
+                        title="Opens Facebook in a new window"
+                        target="_blank"
+                    >
+                        <img
+                            src="../assets/icons/facebook.svg"
+                            alt="Facebook"
+                        />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/ntnu"
+                        title="Opens Instagram in a new window"
+                        target="_blank"
+                    >
+                        <img
+                            src="../assets/icons/instagram.svg"
+                            alt="Instagram"
+                        />
+                    </a>
+                </div>
+                <p id="text3">
+                    <small>
+                        This page was created as part of the subject
+                        <a
+                            href="https://www.ntnu.edu/studies/courses/IDG1292#tab=omEmnet"
+                            >IDG1292</a
+                        >
+                        of the design department by Øystein Røstvik, a student
+                        from AARWEB
+                    </small>
+                </p>
+                <img
+                    id="ntnu-logo"
+                    src="../assets/images/ntnu-logo-white.webp"
+                    alt="
+                Norwegian University of Science and Technology logo"
+                />
+            </div>
+        </footer>
+    </body>
+</html>

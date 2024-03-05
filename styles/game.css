@@ -1,0 +1,129 @@
+section:first-of-type p {
+    margin-block: 20px;
+}
+
+#quiz-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Flip card container */
+.card {
+    background-color: transparent;
+    min-height: 280px;
+    overflow: hidden;
+}
+
+.card img {
+    max-height: 35px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: none;
+}
+
+.card h3 {
+    margin: 10px 0 5px 0;
+}
+
+.card-fake-link {
+    text-decoration: underline;
+    margin-top: auto;
+}
+
+/* Container to position front and back side */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+/* Horizontal flip when mouse hover or tab focus */
+.card:hover .card-inner,
+.card:focus .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: var(--card-blue);
+    color: var(--dark);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    min-height: 280px;
+}
+
+/* Front side color */
+.card-front {
+    background-color: var(--card-blue);
+}
+
+/* Back side color */
+.card-back {
+    background-color: var(--card-red);
+    transform: rotateY(180deg);
+}
+
+#cards-download-btn {
+    background-color: var(--green);
+    text-decoration: none;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#cards-download-btn:hover {
+    background-color: var(--green-hover);
+}
+
+@media screen and (min-width: 250px) {
+    .card {
+        min-height: 200px;
+    }
+
+    .card-front,
+    .card-back {
+        min-height: 200px;
+    }
+
+    .card img {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 330px) {
+    .card {
+        min-height: 160px;
+    }
+
+    .card-front,
+    .card-back {
+        min-height: 160px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        min-height: 200px;
+    }
+
+    #quiz-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

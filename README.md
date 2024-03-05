@@ -1,8 +1,12 @@
-# Live version
+# The Climate Quiz
 
-[Folk site](https://folk.ntnu.no/oystrost/simplicity-notorious/oblig-3/index.html)
+Static webside made using just HTML and CSS, with a high focus on semantics, accessibility and sustainability.
 
-# License
+## Live version
+
+[Click here for live version](https://tanix98.github.io/the-climate-quiz/)
+
+## License
 
 The MIT License (MIT)
 
